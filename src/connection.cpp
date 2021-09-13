@@ -427,7 +427,7 @@ PyObject* Connection_New(PyObject* pConnectString, bool fAutoCommit, bool fAnsi,
     cnxn->datetime_precision     = p->datetime_precision;
     cnxn->need_long_data_len     = p->need_long_data_len;
     cnxn->varchar_maxlength      = p->varchar_maxlength;
-    cnxn->wvarchar_maxlength     = p->wvarchar_maxlength;
+    cnxn->wvarchar_maxlength     = 0; // p->wvarchar_maxlength;
     cnxn->binary_maxlength       = p->binary_maxlength;
 
     return reinterpret_cast<PyObject*>(cnxn);
